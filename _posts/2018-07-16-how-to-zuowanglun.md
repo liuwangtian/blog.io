@@ -3,7 +3,6 @@ layout: post
 title: 坐忘论
 date: 2018-07-16
 categories: blog
-tags: [标签一,标签二]
 description: 文章金句。
 ---
 
