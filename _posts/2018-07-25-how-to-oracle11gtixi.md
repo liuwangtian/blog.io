@@ -6,11 +6,12 @@ categories: blog
 tags: [数据库,Oracle]
 description: 文章金句。
 ---
-
-oracle数据库=实例(instance)+数据文件(datafiles)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实例=内存结构(memory)+进程结构(process)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内存=SGA+PGA<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进程=后台进程+前台进程(服务器进程)<br/>
+---
+oracle数据库=实例(instance)+数据文件(datafiles):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实例=内存结构(memory)+进程结构(process):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内存=SGA+PGA:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进程=后台进程+前台进程(服务器进程):
+---
 
 实例:是连接数据库的一种方式<br/>
 连接(connection):通过客户端与数据库服务器连接产生的进程<br/>
