@@ -6,12 +6,12 @@ categories: blog
 tags: [数据库,Oracle]
 description: 文章金句。
 ---
----
+
 oracle数据库=实例(instance)+数据文件(datafiles):
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实例=内存结构(memory)+进程结构(process):
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内存=SGA+PGA:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进程=后台进程+前台进程(服务器进程):
----
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实例=内存结构(memory)+进程结构(process)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内存=SGA+PGA<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进程=后台进程+前台进程(服务器进程)<br/>
+
 
 实例:是连接数据库的一种方式<br/>
 连接(connection):通过客户端与数据库服务器连接产生的进程<br/>
@@ -25,6 +25,7 @@ SGA:<br/>
 *重做日志缓冲区,<br/>
 大池,JAVA池,流池<br/>
 
+一条SQL的执行过程<br/>
 update t1 set a=10 where b=100; <br/>
 校验:语法,对象是否存在,是否有权限操作,锁信息,等等 <br/>
 校验方式:通过数据字典(由数据库自动运维),或者动态性能视图<br/>
@@ -41,9 +42,9 @@ ARCn  归档进程<br/>
 
 
 参数文件:默认放置在:$ORACLE_HOME/dbs/spfile实例名.ora<br/>
-	参数文件分为两种形式:<br/>
-	二进制形式 ,数据库默认使用的形式 ,不可以vi修改,在数据库运行过程中,对部分参数的修改,可以同时记录在此文件中<br/>
-	文本形式,以文本形式存在,可以vi修改,参数只会在开启数据库时加载,数据库运行过程中修改的参数,无法记录<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参数文件分为两种形式:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二进制形式 ,数据库默认使用的形式 ,不可以vi修改,在数据库运行过程中,对部分参数的修改,可以同时记录在此文件中<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文本形式,以文本形式存在,可以vi修改,参数只会在开启数据库时加载,数据库运行过程中修改的参数,无法记录<br/>
 	
 二进制文件和文本文件可以相互生成<br/>
 create spfile from pfile;<br/>
