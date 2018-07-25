@@ -42,22 +42,20 @@ ARCn  归档进程<br/>
 
 
 参数文件:默认放置在:$ORACLE_HOME/dbs/spfile实例名.ora<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参数文件分为两种形式:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二进制形式 ,数据库默认使用的形式 ,不可以vi修改,在数据库运行过程中,对部分参数的修改,可以同时记录在此文件中<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文本形式,以文本形式存在,可以vi修改,参数只会在开启数据库时加载,数据库运行过程中修改的参数,无法记录<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参数文件分为两种形式:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二进制形式 ,数据库默认使用的形式 ,不可以vi修改,在数据库运行过程中,对部分参数的修改,可以同时记录在此文件中<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文本形式,以文本形式存在,可以vi修改,参数只会在开启数据库时加载,数据库运行过程中修改的参数,无法记录<br/>
 	
 二进制文件和文本文件可以相互生成<br/>
 create spfile from pfile;<br/>
 create pfile from spfile;<br/>
 
 
-密码文件:默认放置在:$ORACLE_HOME/dbs orapw库名.ora<br/>
-	密码文件只记录具有sysdba权限的用户的密码<br/>
-
+密码文件:默认放置在:$ORACLE_HOME/dbs orapw库名.ora,密码文件只记录具有sysdba权限的用户的密码
 
 预警日志:/u01/app/oracle/diag/rdbms/prod4/PROD4/trace/alert实例名.log<br/>
-	文件负责记录数据库引擎的运行状态,比如数据库的启停,数据库运行中,改变结构的信息或报错<br/>
-	从后往前看 找error 找到后看附近的ORA-<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件负责记录数据库引擎的运行状态,比如数据库的启停,数据库运行中,改变结构的信息或报错<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从后往前看 找error 找到后看附近的ORA-<br/>
 
 
 数据库启动:<br/>
@@ -137,35 +135,35 @@ oracle数据为了解决在不同系统中系统块差异问题 设定一个数�
 
 
 创建表空间<br/>
-create  类型1 tablespace 名字2 datafile 数据文件3 size extent4 segment5 6 7 8
-1.smallfile--默认 小文件类型的表空间 可以有多个数据文件 但是每个数据文件最大32G
-  bigfile 大文件类型的表空间 只能有1个数据文件 这个数据文件最大32T blob和clob类型文件的 word文档 pdf文档 视频 音频 图片
-  undo
-  temporary
-2.表空间的名字
-  名字不区分大小写 
-   但是唯一
-3.对于数据文件来说:
-  存在形式 文件系统,裸设备,ASM
-  大小 如果是小文件类型的表空间 单数据文件大小不可超过32G
-       可以开启数据文件的自动扩展 达到当前文件最大值时 会根据步长设置进行增长但是不能超过最大值32G
-4.对于区有两个概念
-  (1)区的管理方式 
-  本地管理--默认值
-  数据字典管理
-  (2)区的分配方式
-  自动分配--默认值
-  指定分配
-5.段的管理方式
-  手动管理
-  自动管理--默认值 ASSM automatic segment space management
-6.压缩选项 
-  选择不压缩--默认值
-7.日志记录
-  记录redo--默认值
-  不记录redo
-8.本表空间所用数据块大小
-  可以设置非8k大小的数据块
+create  类型1 tablespace 名字2 datafile 数据文件3 size extent4 segment5 6 7 8<br/>
+1.smallfile--默认 小文件类型的表空间 可以有多个数据文件 但是每个数据文件最大32G<br/>
+  bigfile 大文件类型的表空间 只能有1个数据文件 这个数据文件最大32T blob和clob类型文件的 word文档 pdf文档 视频 音频 图片<br/>
+  undo<br/>
+  temporary<br/>
+2.表空间的名字<br/>
+  名字不区分大小写 <br/>
+   但是唯一<br/>
+3.对于数据文件来说:<br/>
+  存在形式 文件系统,裸设备,ASM<br/>
+  大小 如果是小文件类型的表空间 单数据文件大小不可超过32G<br/>
+  可以开启数据文件的自动扩展 达到当前文件最大值时 会根据步长设置进行增长但是不能超过最大值32G<br/>
+4.对于区有两个概念<br/>
+  (1)区的管理方式 <br/>
+  本地管理--默认值<br/>
+  数据字典管理<br/>
+  (2)区的分配方式<br/>
+  自动分配--默认值<br/>
+  指定分配<br/>
+5.段的管理方式<br/>
+  手动管理<br/>
+  自动管理--默认值 ASSM automatic segment space management<br/>
+6.压缩选项 <br/>
+  选择不压缩--默认值<br/>
+7.日志记录<br/>
+  记录redo--默认值<br/>
+  不记录redo<br/>
+8.本表空间所用数据块大小<br/>
+  可以设置非8k大小的数据块<br/>
 
-区分配 使用指定大小 空间使用率不高 分配次数少 适用于单次操纵数据量大
-	   自动分配 空间使用率高 分配次数频繁 比较消耗计算资源 适用于单次操纵数据量小
+区分配 使用指定大小 空间使用率不高 分配次数少 适用于单次操纵数据量大<br/>
+自动分配 空间使用率高 分配次数频繁 比较消耗计算资源 适用于单次操纵数据量小<br/>
