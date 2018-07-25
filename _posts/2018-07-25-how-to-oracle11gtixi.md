@@ -7,7 +7,7 @@ tags: [数据库,Oracle]
 description: 文章金句。
 ---
 
-oracle数据库=实例(instance)+数据文件(datafiles):
+oracle数据库=实例(instance)+数据文件(datafiles)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实例=内存结构(memory)+进程结构(process)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内存=SGA+PGA<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进程=后台进程+前台进程(服务器进程)<br/>
