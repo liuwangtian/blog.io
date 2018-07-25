@@ -54,8 +54,8 @@ create pfile from spfile;<br/>
 密码文件:默认放置在:$ORACLE_HOME/dbs orapw库名.ora,密码文件只记录具有sysdba权限的用户的密码
 
 预警日志:/u01/app/oracle/diag/rdbms/prod4/PROD4/trace/alert实例名.log<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件负责记录数据库引擎的运行状态,比如数据库的启停,数据库运行中,改变结构的信息或报错<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从后往前看 找error 找到后看附近的ORA-<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件负责记录数据库引擎的运行状态,比如数据库的启停,数据库运行中,改变结构的信息或报错<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从后往前看 找error 找到后看附近的ORA-<br/>
 
 
 数据库启动:<br/>
