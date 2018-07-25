@@ -42,9 +42,9 @@ ARCn  归档进程<br/>
 
 
 参数文件:默认放置在:$ORACLE_HOME/dbs/spfile实例名.ora<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参数文件分为两种形式:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二进制形式 ,数据库默认使用的形式 ,不可以vi修改,在数据库运行过程中,对部分参数的修改,可以同时记录在此文件中<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文本形式,以文本形式存在,可以vi修改,参数只会在开启数据库时加载,数据库运行过程中修改的参数,无法记录<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参数文件分为两种形式:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二进制形式 ,数据库默认使用的形式 ,不可以vi修改,在数据库运行过程中,对部分参数的修改,可以同时记录在此文件中<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文本形式,以文本形式存在,可以vi修改,参数只会在开启数据库时加载,数据库运行过程中修改的参数,无法记录<br/>
 	
 二进制文件和文本文件可以相互生成<br/>
 create spfile from pfile;<br/>
